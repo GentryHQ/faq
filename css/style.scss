@@ -1,0 +1,140 @@
+@use "./reset";
+@use "./utili" as u;
+
+body {
+  background: linear-gradient(u.$SoftViolet, u.$SoftBlue);
+}
+
+.faq {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: u.$white;
+    padding: 0 30px 50px;
+    margin-block: 200px 100px;
+    border-radius: 20px;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  &__col1 {
+    margin-block: -160px 50px;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    padding-block-end: 50px;
+
+    img {
+        inline-size: 100%;
+    }
+
+    .mail_box {
+      display: none;
+    }
+  }
+
+  &__col2 {
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .faq__block {
+      margin-block: 30px 10px;
+      border-bottom: 2px solid u.$LightGrayishBlue;
+      padding-block-end: 10px;
+    }
+
+    //toggled when a question is clicked
+    .faq__block.active {
+      .faq__answer {
+        opacity: 1;
+        height: 100px;
+        overflow: auto;
+      }
+
+      .arrow {
+        transform: rotate(180deg);
+      }
+
+      h2 {
+        font-weight: 700;
+      }
+    }
+
+    .faq__question {
+      display: flex;
+      justify-content: space-between;
+      margin-block-end: 10px;
+      cursor: pointer;
+
+      .arrow {
+        inline-size: 10px;
+        block-size: 10px;
+        transition: 0.5s ease-in-out;
+      }
+
+      h2 {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      h2:hover {
+        color: u.$SoftRed;
+      }
+    }
+    .faq__answer {
+      padding-block-start: 10px;
+      height: 0;
+      overflow: hidden;
+      transition: 0.5s ease;
+      opacity: 0;
+    }
+  }
+}
+
+footer {
+  padding-block-end: 50px;
+}
+
+
+//Media Query 
+@media screen and (min-width: 768px) {
+    .faq {
+        &__wrapper {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding-block-start: 50px;
+          gap: 50px;
+        }
+      
+        &__col1 {
+            flex-basis: 50%;
+          margin-block: 0px;
+          margin-inline-start: -50px;
+          background-image: url("../images/bg-pattern-desktop.svg");
+          background-position: center center;
+          background-size: contain;
+          padding-block-end: 150px;
+          position: relative;
+      
+          .mail_box {
+            display: block;
+            width: 130px;
+            position: absolute;
+            top: 34%;
+            left: 2%;
+          }
+        }
+      
+        &__col2 {
+            flex-basis: 50%;
+
+          h1 {
+            font-size: 2.3rem;
+            text-align: left;
+          }
+      }
+    }
+}

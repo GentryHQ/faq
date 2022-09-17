@@ -1,0 +1,23 @@
+// Color Variables
+
+//Text
+$VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+$SoftRed: hsl(14, 88%, 65%);
+
+//Background gradient
+$SoftViolet: hsl(273, 75%, 66%);
+$SoftBlue: hsl(240, 73%, 65%);
+
+//Neutrals
+$VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+$DarkGrayishBlue: hsl(240, 6%, 50%);
+$LightGrayishBlue: hsl(240, 5%, 91%); //Divider
+$white: white;
+
+
+//container style
+.container {
+    max-inline-size: 62.5rem;
+    margin-inline: auto;
+    padding-inline: 1.57rem;
+}
