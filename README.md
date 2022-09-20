@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repo](https://)
-- Live Site URL: [GitHub Pages](https://your-live-site-url.com)
+- Solution URL: [GitHub Repo](https://github.com/GentryHQ/faq)
+- Live Site URL: [GitHub Pages](https://gentryhq.github.io/faq/)
 
 ## My process
 
